@@ -2,6 +2,9 @@ tasks = []
 
 def add_task():
     task = input("Enter task: ")
+    if not task.strip():
+        print("Task description cannot be empty.")
+        return
     tasks.append(task)
     print("Task added successfully!")
 
